@@ -13,7 +13,7 @@ function App() {
     'X-RapidAPI-Key': 'b83d6f10abmshfecd1df8d0bd910p1c4391jsnd97500d71ee9',
     'X-RapidAPI-Host': 'latest-stock-price.p.rapidapi.com'
   }})
-  .then((data)=>console.log(data))
+  .then((data)=>console.log(data)) //This is a change
 
  },[])
 
