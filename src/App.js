@@ -1,27 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import axios from "axios";
-import React, {useEffect} from 'react'
+import { Route, Routes } from 'react-router-dom';
 
+import { Main } from "./Components/Main/Main";
+import { Header } from "./Components/Header/Header";
+import { SideBar } from "./Components/SideBar/SideBar";
+import { Footer } from "./Components/Footer/Footer";
 
-function App() {
+import "./App.css";
 
- useEffect(()=>{
-
-  axios.get('https://latest-stock-price.p.rapidapi.com/price',{ params: {Indices: '<REQUIRED>'},
-  headers: {
-    'X-RapidAPI-Key': 'b83d6f10abmshfecd1df8d0bd910p1c4391jsnd97500d71ee9',
-    'X-RapidAPI-Host': 'latest-stock-price.p.rapidapi.com'
-  }})
-  .then((data)=>console.log(data))
-
- },[])
+export const App = ()=> {
 
   return (
-    <div className="App">
-      
-    </div>
-  );
-}
+    < >
 
-export default App;
+  <Routes>
+    
+    <Route path='/' 
+    element={<><Header/><div className="mainAndSidebarComponent"><SideBar/><Main/></div><Footer/></>}/>
+
+  </Routes>
+   
+    </>
+  );
+}
