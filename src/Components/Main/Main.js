@@ -5,7 +5,7 @@ import { MainContext } from '../../Contexts/MainContext';
 
 import '../Main/main.css'
 
-export function Main() {
+export const Main = () => {
 
     const { data, setData, error, setError, isLoading, setIsLoading} = useContext(MainContext);
 
