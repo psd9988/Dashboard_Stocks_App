@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react'
-import '../Main/main.css'
 import axios from "axios";
+
 import { MainContext } from '../../Contexts/MainContext';
+
+import '../Main/main.css'
 
 export function Main() {
 
