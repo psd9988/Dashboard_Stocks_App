@@ -15,7 +15,7 @@ export const App = ()=> {
   <Routes>
     
     <Route path='/' 
-    element={<><Header/><div className="mainAndSidebarComponent"><SideBar/><Main/></div><Footer/></>}/>
+    element={<> <div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div> </>}/>
 
   </Routes>
    

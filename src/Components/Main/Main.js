@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react'
-import '../Main/main.css'
 import axios from "axios";
+
 import { MainContext } from '../../Contexts/MainContext';
 
-export function Main() {
+import '../Main/main.css'
+
+export const Main = () => {
 
     const { data, setData, error, setError, isLoading, setIsLoading} = useContext(MainContext);
 
