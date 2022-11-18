@@ -13,12 +13,10 @@ export const App = ()=> {
     < >
 
   <Routes>
-    
     <Route path='/' 
-    element={<> <div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div> </>}/>
-
+    element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div></>}/>
   </Routes>
    
-    </>
-  );
+</>
+);
 }
