@@ -4,33 +4,20 @@ import { Main } from "./Components/Main/Main";
 import { Header } from "./Components/Header/Header";
 import { SideBar } from "./Components/SideBar/SideBar";
 import { Footer } from "./Components/Footer/Footer";
-//import { Register } from "./Components/Header/Register";
+import { Login } from "./Components/Header/Login";
 
 import "./App.css";
 
 export const App = () => {
   return (
-    <>
-      {/* <Register/> */}
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              {" "}
-              <div className="mainAndSidebarComponent">
-                <SideBar />
-                <div>
-                  <Header />
-                  <Main />
-                  <Footer />
-                </div>
-              </div>{" "}
-            </>
-          }
-        />
-      </Routes>
-          
-    </>
-  );
-};
+    < >
+
+  <Routes>
+    <Route path='/' 
+    element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div></>}/>
+    <Route path="/login" element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Login/><Footer/></div></div></>}/>
+  </Routes>
+  
+</>
+);
+}

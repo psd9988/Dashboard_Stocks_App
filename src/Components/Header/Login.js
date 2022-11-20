@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-//import "../Header/login.css"
+import "../Header/login.css"
 
 export function Login() {
 
@@ -7,14 +7,13 @@ export function Login() {
 
   return (
     <>
-      <h1 className="Login-Form">Login Form</h1>
       <div className="form2">
         {!user ?
           <form className="form">
             <input type="text" name="username" placeholder="UserName" />
             <input type="password" placeholder="Password" name="password"/>
-            <button type="submit">Login</button>
-            <button onClick={() => setUser(true)}>Don't have account..? Sign In</button>
+            <button type="submit" className="loginBtn">Login</button>
+            <button onClick={() => setUser(true)} className="createBtn">Don't have account..? Sign In</button>
           </form>
           :
           <div className="form1">
@@ -22,8 +21,8 @@ export function Login() {
             <input type="text" name="emailId" placeholder="Email ID"></input><br></br>
             <input type="password" placeholder="Enter Password" name="password"/><br />
             <input type="password" placeholder="Re-enter Password" name="password"/><br></br>
-            <button type="submit">Sign UP</button><br></br>
-            <button onClick={() => setUser(false)}>Already have account Login...</button>
+            <button type="submit" className="signupBtn">Sign UP</button><br></br>
+            <button onClick={() => setUser(false)} className="createBtn">Already have account Login...</button>
           </div>
         }</div>
     </>

@@ -1,16 +1,17 @@
 import React from "react";
 
 import "../SideBar/sidebar.css";
+import logo from "../../Assets/logo.jpg";
 
 export const SideBar = () => {
   return (
-    <div classNameName="sideBarMainContainer">
+    <>
       <button type="button" className=" btnside burger" onclick="toggleSidebar()"></button>
       <aside className="sidebar">
         <nav>
           <button type="button" className="btnside">
-            <a href="/src/Assets/profilePic.jpg"></a>
-            <span className="brand">INVESTURE</span>
+            <img src={logo} alt="logo" srcset="" />
+            <span className="brand">STOKIDA</span>
           </button>
           <button type="button" className="btnside">
             <i className="fa-solid fa-house"></i>
@@ -42,6 +43,6 @@ export const SideBar = () => {
           </button>
         </nav>
       </aside>
-    </div>
+    </>
   );
 };

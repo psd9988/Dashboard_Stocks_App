@@ -3,6 +3,8 @@ import axios from "axios";
 
 import { MainContext } from '../../Contexts/MainContext';
 import { Login } from '../Header/Login';
+import { Instrument } from '../Instruments/Instrument';
+import { TopGainers } from '../Top Gainers/TopGainers';
 
 import '../Main/main.css'
 
@@ -34,7 +36,8 @@ export const Main = () => {
 
   return (
     <>
-    <h1 className='mainContainer'>Main</h1>
+    <Instrument/>
+    <TopGainers/>
     </>
   )
 }

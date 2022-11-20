@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 import "../Header/header.css";
+import profilePic from "../../Assets/profileLogo.png"
+import { NavLink } from "react-router-dom";
+import { Login } from "./Login";
 
 export const Header = () => {
   const [name, setNamre] = useState("Dashboard");
@@ -28,7 +31,7 @@ export const Header = () => {
           <button className="btn btnNoti">
             <i class="fa-regular fa-bell"></i>
           </button>
-          <a href="/"><img src="" /></a>
+          <NavLink to={"/Login"}><img src={profilePic} /></NavLink>
         </nav>
       </nav>
     </div>

@@ -11,6 +11,11 @@
   cursor: pointer;
 }
 
+.btnside:hover {
+  background-color: #ebebeb;
+  font-size: large;
+}
+
 .sidebar,
 .burger {
   position: fixed;
@@ -73,8 +78,9 @@ body.open .burger {
 }
 
 .btnside > img {
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .sidebar > nav > .btnside > span {
