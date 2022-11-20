@@ -1,0 +1,36 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    justify-content: space-around;
+    height: 150px;
+    border: 2px solid black;
+    background-color: pink;
+  }
+  
+  .form1 {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    justify-content: space-around;
+    height: 320px;
+    border: 2px solid black;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    background-color: pink;
+  }
+  
+  .form input,.form1 input {
+    border-radius: 8px;
+    padding: 5px;
+  }
+  
+  .form button,.form1 button {
+    border-radius: 8px;
+    padding: 3px;
+    width: 100px;
+    background-color: aqua;
+    font-weight: bolder;
+  }

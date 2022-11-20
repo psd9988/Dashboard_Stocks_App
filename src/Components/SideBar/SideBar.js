@@ -4,7 +4,7 @@ import "../SideBar/sidebar.css";
 
 export const SideBar = () => {
   return (
-    <div classNameName="sideBarMainContainer sidebar">
+    <div classNameName="sideBarMainContainer">
       <button type="button" className=" btnside burger" onclick="toggleSidebar()"></button>
       <aside className="sidebar">
         <nav>
