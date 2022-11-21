@@ -16,6 +16,8 @@ export const App = () => {
     <Route path='/' 
     element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div></>}/>
     <Route path="/login" element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Login/><Footer/></div></div></>}/>
+    <Route path="/App" 
+    element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div></>}/>
   </Routes>
   
 </>

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 import profilePic from "../../Assets/profileLogo.png"
 import { NavLink } from "react-router-dom";
-import { Login } from "./Login";
 
 import "../Header/header.css";
 

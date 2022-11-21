@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import "../Header/login.css"
 
@@ -11,7 +12,7 @@ export function Login() {
     <form className="form">
     <input type="text" name="username" placeholder="UserName" />
     <input type="password" placeholder="Password" name="password"/>
-    <button type="submit" className="loginBtn">Login</button>
+    <NavLink to={"/App"}><button type="submit" className="loginBtn">Login</button></NavLink>
     <button onClick={() => setUser(true)} className="createBtn">Don't have account..? Sign In</button>
   </form>
   )
