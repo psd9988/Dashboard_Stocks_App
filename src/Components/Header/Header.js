@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
-import "../Header/header.css";
 import profilePic from "../../Assets/profileLogo.png"
 import { NavLink } from "react-router-dom";
 import { Login } from "./Login";
 
+import "../Header/header.css";
+
 export const Header = () => {
-  const [name, setNamre] = useState("Dashboard");
+  const [name, setName] = useState("Dashboard");
   return (
     <div className="mainHeaderContainer">
       <nav className="navbar">
