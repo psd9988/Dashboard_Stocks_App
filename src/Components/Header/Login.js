@@ -8,12 +8,13 @@ export function Login() {
   const [user, setUser] = useState(false)
 
   function Loginform(){
+    const createAccount = () => setUser(true);
     return (
     <form className="form">
     <input type="text" name="username" placeholder="UserName" />
     <input type="password" placeholder="Password" name="password"/>
     <NavLink to={"/App"}><button type="submit" className="loginBtn">Login</button></NavLink>
-    <button onClick={() => setUser(true)} className="createBtn">Don't have account..? Sign In</button>
+    <button onClick={createAccount()} className="createBtn">Don't have account..? Sign In</button>
   </form>
   )
   }
