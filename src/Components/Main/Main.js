@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from "axios";
 
 import { MainContext } from '../../Contexts/MainContext';
+import { Login } from '../Header/Login';
 import { Instrument } from '../Instruments/Instrument';
 import { TopGainers } from '../Top Gainers/TopGainers';
 
