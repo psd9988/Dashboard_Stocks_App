@@ -16,7 +16,7 @@ ul{
   list-style: none;
 }
 .footerMainContainer{
-  background-color: #52734a;
+  background-color: #204b15;
     padding: 70px 0;
    
 }
@@ -56,8 +56,10 @@ ul{
   transition: all 0.3s ease;
 }
 .footer-col ul li a:hover{
-  color: blue; /* #ffffff*/
-  padding-left: 8px;
+  /* color: blue;  */
+  /* padding-left: 8px; */
+  color: white;
+  font-weight: bold;
 }
 .footer-col .social-links a{
   display: inline-block;

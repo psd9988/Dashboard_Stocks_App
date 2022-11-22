@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from 'react'
 import axios from "axios";
 
 import { MainContext } from '../../Contexts/MainContext';
-import { Instrument } from '../Instruments/Instrument';
+// import { Instrument } from '../Instruments/Instrument';
+import { Instruments2 } from '../Instruments2/Instruments2';
 import { TopGainers } from '../Top Gainers/TopGainers';
 
 import '../Main/main.css'
@@ -35,7 +36,7 @@ export const Main = () => {
 
   return (
     <>
-    <Instrument/>
+    <Instruments2/>
     <TopGainers/>
     </>
   )

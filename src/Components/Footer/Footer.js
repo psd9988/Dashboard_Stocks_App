@@ -4,6 +4,13 @@ import { NavLink } from 'react-router-dom'
 import '../Footer/footer.css'
 
 export const Footer = () => {
+const myFooterLinks1 = ['About us', 'Our services', 'Privacy policy', 'Affiliate program']
+
+const myFooterLinks2 = ["Faq's", 'Buy Equities/Options', 'Sell Equities/Options', 'Order status', 'Payment options']
+
+const myFooterLinks3 = ['Watch List', 'Add To Watch List', 'Remove from Watch List', 'New Watch List']
+
+const myFooterLinks4 = ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-instagram', 'fab fa-linkedin-in']
 
   return (
 
@@ -13,38 +20,26 @@ export const Footer = () => {
           <div className="footer-col">
             <h4>Stokida</h4>
             <ul>
-              <li><NavLink to={'/'}>About us</NavLink></li>
-              <li><NavLink to={'/'}>Our services</NavLink></li>
-              <li><NavLink to={'/'}>Privacy policy</NavLink></li>
-              <li><NavLink to={'/'}>Affiliate program</NavLink></li>
+            {myFooterLinks1.map((footerNavLinks)=> <li><NavLink to={'/'}>{footerNavLinks}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Get help</h4>
             <ul>
-              <li><NavLink to={'/'}>FAQ</NavLink></li>
-              <li><NavLink to={'/'}>Buy Equities/Options</NavLink></li>
-              <li><NavLink to={'/'}>Sell Equities/Options</NavLink></li>
-              <li><NavLink to={'/'}>Order status</NavLink></li>
-              <li><NavLink to={'/'}>Payment options</NavLink></li>
+            {myFooterLinks2.map((footerNavLinks)=> <li><NavLink to={'/'}>{footerNavLinks}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Portfolio</h4>
             <ul>
-              <li><NavLink to={'/'}>Watch List</NavLink></li>
-              <li><NavLink to={'/'}>Add To Watch List</NavLink></li>
-              <li><NavLink to={'/'}>Remove from Watch List</NavLink></li>
-              <li><NavLink to={'/'}>New Watch List</NavLink></li>
+            {myFooterLinks3.map((footerNavLinks)=> <li><NavLink to={'/'}>{footerNavLinks}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <NavLink to={'/'}><i className="fab fa-facebook-f"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-twitter"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-instagram"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-linkedin-in"></i></NavLink>
+            {myFooterLinks4.map((footerIcons)=>  <NavLink to={'/'}><i className={footerIcons}></i></NavLink>)}
+             
             </div>
           </div>
         </div>
