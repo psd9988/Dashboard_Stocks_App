@@ -1,6 +1,99 @@
-.sideBarMainContainer{
-    position: relative;
-    width: 20vw;
-    background-color: lightcoral;
+.sideBarMainContainer {
+  /* height: 100vh; */
+  width: 80vh;
+  /* background-color: lightcoral; */
+}
 
+.btnside {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.sidebtn:hover {
+  background-color: #ebebeb;
+  font-size: large;
+}
+
+.sidebar,
+.burger {
+  position: fixed;
+  top: 0;
+}
+
+.sidebar {
+  /* z-index: 2; */
+  /* left: 72px; */
+  /* width: 20vm; */
+  height: 100%;
+  background: #ffffff;
+  transition: 0.4s;
+}
+
+@media (width < 500px) {
+  .sidebar {
+    translate: -100% 0;
+  }
+
+  body.open .sidebar {
+    translate: 0 0;
+  }
+}
+
+.burger {
+  z-index: 1;
+  left: 72px;
+  display: grid;
+  place-items: center;
+  width: 72px;
+  height: 64px;
+  /* background: url(/src/Assets/hamburger.jpg) no-repeat center; */
+}
+
+body.open .burger {
+  left: auto;
+  right: 0;
+  /* background: url(./assets/icon-close.svg) no-repeat center; */
+}
+
+@media (width >= 500px) {
+  .burger {
+    display: none;
+  }
+}
+
+.sidebar > nav {
+  display: grid;
+}
+
+.btnside {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.btnside > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.sidebar > nav > .btnside > span {
+  border-radius: 4px;
+  color: #000000;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1;
+  transition: 0.4s;
+}
+
+.sidebar > nav > .btnside > .brand {
+  font-weight: bolder;
+  font-size: x-large;
 }
