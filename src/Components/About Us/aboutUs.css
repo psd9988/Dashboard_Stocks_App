@@ -1,0 +1,27 @@
+.aboutUsContainer{
+    margin: .5rem 2rem 0 15rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.aboutUsMainHeading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: grey;
+    text-align: justify;
+}
+
+.aboutUsParasContainer1{
+    display: flex;
+    font-size: 1.2rem;
+    margin: .5rem 0 1rem 0;
+    color: rgb(120, 129, 107);
+}
+
+.aboutUsParas1{
+    text-align: justify;
+    margin: 0 1rem 0 0;
+}
+.aboutUsParas2{
+    text-align: justify;
+    margin: 0 1rem 0 0;
+}

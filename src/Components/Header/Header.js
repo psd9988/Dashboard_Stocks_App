@@ -10,9 +10,9 @@ export const Header = () => {
   return (
     <div className="mainHeaderContainer">
       <nav className="navbar">
-        <div className="name">
+        {/* <div className="name">
           <h1>{name}</h1>
-        </div>
+        </div> */}
         <div className="center">
           <div className="search">
             <input

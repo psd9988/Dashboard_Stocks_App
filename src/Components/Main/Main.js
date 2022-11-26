@@ -6,39 +6,52 @@ import { MainContext } from '../../Contexts/MainContext';
 import { Login } from '../Header/Login';
 import { Instrument } from '../Instruments/Instrument';
 import { TopGainers } from '../Top Gainers/TopGainers';
+import { StockChart } from '../charts/StockChart';
+import {FundsDoughnutChart} from '../charts/FundsDoughnutChart'
+import {DividendSimpleChart} from '../charts/DividendSimpleChart'
 
 import '../Main/main.css'
 
+
+
 export const Main = () => {
+
+  // const fruits = [{name: 'apple'}, {name: 'papaya'}]
 
     const { data, setData, error, setError, isLoading, setIsLoading} = useContext(MainContext);
 
-    const [apiUrl, setApiUrl] = 
-    useState(`https://api.polygon.io/v3/reference/exchanges?asset_class=stocks&locale=us&apiKey=dSdCEhxwiWujTb_v9bZlnqI7eQ3yyy0L`
-      );
+    
 
-    useEffect(() => {
-      const getData = async () => {
-        try {
-          setIsLoading(true);
-          const response = await axios.get(apiUrl);
-          setData(response.data.results);
-          setError(null);
-        } catch (error) {
-          setError(error.message);
-          setData(null);
-        } finally {
-          setIsLoading(false);
-        }
-      };
-      getData();
-    }, []);
+
+    // const [apiUrl, setApiUrl] = 
+    // useState(`https://api.polygon.io/v3/reference/exchanges?asset_class=stocks&locale=us&apiKey=dSdCEhxwiWujTb_v9bZlnqI7eQ3yyy0L`
+    //   );
+
+    // useEffect(() => {
+    //   const getData = async () => {
+    //     try {
+    //       setIsLoading(true);
+    //       const response = await axios.get(apiUrl);
+    //       setData(response.data.results);
+    //       setError(null);
+    //     } catch (error) {
+    //       setError(error.message);
+    //       setData(null);
+    //     } finally {
+    //       setIsLoading(false);
+    //     }
+    //   };
+    //   getData();
+    // }, []);
 
 
   return (
     <>
+    
+  
+    <StockChart symbol={'IBM'}/>
     <Instrument/>
-    <TopGainers/>
+    <div className='topGainersFundsDoughnutChartsContainer'><TopGainers/><FundsDoughnutChart/></div><DividendSimpleChart/>
     </>
   )
 }

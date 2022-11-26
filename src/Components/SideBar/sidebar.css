@@ -1,7 +1,6 @@
 .sideBarMainContainer {
-  /* height: 100vh; */
-  width: 80vh;
-  /* background-color: lightcoral; */
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .btnside {
@@ -12,7 +11,7 @@
 }
 
 .sidebtn:hover {
-  background-color: #ebebeb;
+  background-color: #c5eecf;
   font-size: large;
 }
 
@@ -23,22 +22,9 @@
 }
 
 .sidebar {
-  /* z-index: 2; */
-  /* left: 72px; */
-  /* width: 20vm; */
   height: 100%;
   background: #ffffff;
   transition: 0.4s;
-}
-
-@media (width < 500px) {
-  .sidebar {
-    translate: -100% 0;
-  }
-
-  body.open .sidebar {
-    translate: 0 0;
-  }
 }
 
 .burger {
@@ -78,22 +64,22 @@ body.open .burger {
 }
 
 .btnside > img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
 .sidebar > nav > .btnside > span {
   border-radius: 4px;
   color: #000000;
-  font-family: "Poppins";
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1;
   transition: 0.4s;
 }
 
 .sidebar > nav > .btnside > .brand {
-  font-weight: bolder;
-  font-size: x-large;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
 }
