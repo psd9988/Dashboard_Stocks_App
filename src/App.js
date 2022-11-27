@@ -5,7 +5,7 @@ import { Header } from "./Components/Header/Header";
 import { SideBar } from "./Components/SideBar/SideBar";
 import { Footer } from "./Components/Footer/Footer";
 import { Login } from "./Components/Header/Login";
-import {Home} from "./Components/Home/Home";
+import {Stocks} from "./Components/Stocks/Stocks";
 
 
 import "./App.css";
@@ -17,7 +17,7 @@ export const App = () => {
 
   <Routes>
     
-    <Route path="/home" element={<><Home/></>}/>
+    <Route path="/stocks" element={<><Stocks/></>}/>
 
     <Route path='/' 
     element={<><div className="mainAndSidebarComponent"><SideBar/><div><Header/><Main/><Footer/></div></div></>}/>
