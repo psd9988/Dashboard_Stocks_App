@@ -45,13 +45,13 @@
   background:  #ebebeb;
 }
 
-.name {
+/* .name {
   display: flex;
   align-items: center;
   gap: 8px;
   width: 88px;
   padding-left: 10px;
-}
+} */
 
 @media (width >= 500px) {
   .name {
@@ -114,7 +114,7 @@
 }
 
 .search input {
-  flex: 1 1 auto;
+  
   height: 44px;
   width: 25vw;
   padding-left: 16px;

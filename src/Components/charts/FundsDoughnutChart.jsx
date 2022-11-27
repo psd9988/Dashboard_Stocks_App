@@ -1,7 +1,7 @@
 /* InvestmentDoughnutChart.js */
 // import React, { Component } from "react";
 import React from "react";
-import CanvasJSReact from "../canvasjs.stock.react";
+import CanvasJSReact from "../../canvasjs.stock.react";
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
@@ -11,15 +11,15 @@ export  const FundsDoughnutChart = () =>{
       animationEnabled: true,
       title: {
         text: "Portfolio Distribution",
-      },
+      }, height: '280', width:'350',
       subtitles: [
         {
           text: "71% Profit",
           fontColor: "ForestGreen",
           verticalAlign: "center",
-          fontSize: 24,
+          fontSize: 20,
           dockInsidePlotArea: true,
-        },
+        }, 
       ],
       data: [
         {
@@ -38,7 +38,8 @@ export  const FundsDoughnutChart = () =>{
       ],
     }
     return (
-      <div style={{ height: "200px", width: "600px" }}>
+      <div className="fundsDoughnutChartContainer" 
+      style={{ padding: '1rem'}}>
         <CanvasJSChart
           options={options}
           /* onRef={ref => this.chart = ref} */

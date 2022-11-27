@@ -16,7 +16,7 @@ body{
 }
 
 .sidebtn:hover {
-  background-color: #6cc75a;
+  background-color: #c5eecf;
   font-size: large;
 }
 
@@ -27,9 +27,6 @@ body{
 }
 
 .sidebar {
-  /* z-index: 2; */
-  /* left: 72px; */
-  /* width: 20vm; */
   height: 100%;
   background: #ffffff;
   transition: 0.4s;
@@ -73,23 +70,28 @@ body{
 }
 
 .btnside > img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
 .sidebar > nav > .btnside > span {
   border-radius: 4px;
   color: #000000;
-  font-family: "Poppins";
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 300;
-  letter-spacing: 2px;
   line-height: 1;
   transition: 0.4s;
 }
 
 .sidebar > nav > .btnside > .brand {
-  font-weight: bolder;
-  font-size: x-large;
+  font-size: 1.2rem;
+  font-weight: bold;
+  
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
 }

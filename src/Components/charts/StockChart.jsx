@@ -1,11 +1,11 @@
 /* StockChart.js */
 import React, { useState, useEffect } from "react";
-import CanvasJSReact from "../canvasjs.stock.react";
+import CanvasJSReact from "../../canvasjs.stock.react";
 
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSStockChart = CanvasJSReact.CanvasJSStockChart;
 
-const StockChart = ({ symbol }) => {
+export const StockChart = ({ symbol }) => {
   const [dataPoints, setDataPoints] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -58,6 +58,7 @@ const StockChart = ({ symbol }) => {
   const options = {
     title: {
       text: `StockChart ${symbol}`,
+      fontFamily: "cooper",
     },
     theme: "light2",
     subtitles: [
@@ -98,7 +99,7 @@ const StockChart = ({ symbol }) => {
         ],
       },
     ],
-    navigator: {
+    navigator: {enabled:false,
       slider: {
         minimum: new Date("2022-11-01"),
         maximum: new Date("2022-11-18"),
@@ -112,7 +113,7 @@ const StockChart = ({ symbol }) => {
   };
 
   return (
-    <div>
+    <div className="StockChartMainContainer">
       <div>
         {
           // Reference: https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator
@@ -225,4 +226,4 @@ const StockChart = ({ symbol }) => {
 // }
 // }
 
-export default StockChart;
+

@@ -4,6 +4,16 @@ import { NavLink } from 'react-router-dom'
 import '../Footer/footer.css'
 
 export const Footer = () => {
+  const myFooterLinks1 = [{text:'About Us', location: 'aboutus'}, {text: 'Our Services', location: 'ourservices'}, 
+{text: 'Privacy Policy', location: 'privacypolicy'}, {text: 'Affiliate Program', location: 'affiliateprogram'}]
+
+  const myFooterLinks2 = [{text:'FAQ', location: 'faq'}, {text: 'Buy Equities/Options', location: 'buyequities'}, 
+{text: 'Order status', location: 'orderstatus'}, {text: 'Payment options', location: 'paymentoptions'}]
+
+  const myFooterLinks3 = [{text:'Watch List', location: 'watchlist'}, {text: 'Add To Watch List', location: 'addtowatchlist'}, 
+{text: 'Remove from Watch List', location: 'removefromwatchlist'}, {text: 'New Watch List', location: 'newwatchlist'}]
+
+  const myFooterLinks4 = ['fab fa-facebook-f', 'fab fa-twitter', 'fab fa-instagram', 'fab fa-linkedin-in']
 
   return (
 
@@ -13,38 +23,26 @@ export const Footer = () => {
           <div className="footer-col">
             <h4>Stokida</h4>
             <ul>
-              <li><NavLink to={'/'}>About us</NavLink></li>
-              <li><NavLink to={'/'}>Our services</NavLink></li>
-              <li><NavLink to={'/'}>Privacy policy</NavLink></li>
-              <li><NavLink to={'/'}>Affiliate program</NavLink></li>
+              {myFooterLinks1.map((footerNavLinks, key) => <li><NavLink key={key} to={`/${footerNavLinks.location}`}>{footerNavLinks.text}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Get help</h4>
             <ul>
-              <li><NavLink to={'/'}>FAQ</NavLink></li>
-              <li><NavLink to={'/'}>Buy Equities/Options</NavLink></li>
-              <li><NavLink to={'/'}>Sell Equities/Options</NavLink></li>
-              <li><NavLink to={'/'}>Order status</NavLink></li>
-              <li><NavLink to={'/'}>Payment options</NavLink></li>
+              {myFooterLinks2.map((footerNavLinks, key) => <li><NavLink key={key} to={`/${footerNavLinks.location}`}>{footerNavLinks.text}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Portfolio</h4>
             <ul>
-              <li><NavLink to={'/'}>Watch List</NavLink></li>
-              <li><NavLink to={'/'}>Add To Watch List</NavLink></li>
-              <li><NavLink to={'/'}>Remove from Watch List</NavLink></li>
-              <li><NavLink to={'/'}>New Watch List</NavLink></li>
+              {myFooterLinks3.map((footerNavLinks, key) => <li><NavLink key={key} to={`/${footerNavLinks.location}`}>{footerNavLinks.text}</NavLink></li>)}
             </ul>
           </div>
           <div className="footer-col">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <NavLink to={'/'}><i className="fab fa-facebook-f"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-twitter"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-instagram"></i></NavLink>
-              <NavLink to={'/'}><i className="fab fa-linkedin-in"></i></NavLink>
+              {myFooterLinks4.map((footerIcons, key) => <NavLink key={key} to={'/'}><i className={footerIcons}></i></NavLink>)}
+
             </div>
           </div>
         </div>

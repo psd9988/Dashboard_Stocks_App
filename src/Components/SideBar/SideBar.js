@@ -1,6 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
-import logo from "../../Assets/logo.jpg";
+import logo from "../../Assets/stocks.png";
 
 import "../SideBar/sidebar.css";
 
@@ -18,11 +19,11 @@ export const SideBar = () => {
           </button>
           <button type="button" className="btnside sidebtn">
             <i className="fa-solid fa-house"></i>
-            <span>Dashboard</span>
+           <NavLink to={'/'} > <span>Dashboard</span></NavLink>
           </button>
           <button type="button" className="btnside sidebtn">
             <i class="fa-solid fa-money-bill-trend-up"></i>
-            <span>Stocks</span>
+            <NavLink to={'/stocks'}> <span>Stocks</span></NavLink>
           </button>
           <button type="button" className="btnside sidebtn">
             <i class="fa-regular fa-newspaper"></i>
