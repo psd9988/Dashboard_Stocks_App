@@ -1,7 +1,37 @@
 .mainContainer{
-
     height: 75vh;
     width: 80vw;
     background-color: darkblue;
+    position: relative;
    
+}
+
+.topGainersFundsDoughnutChartsContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.fruits{
+    animation: moveToTop 1s linear forwards, hide 5s forwards;
+    transition: 1s ease-in;
+}
+
+.fruits{
+    position: absolute;
+    margin-left: 500px;
+    z-index: 1000;
+}
+
+@keyframes moveToTop {
+    from{transform: translateY(500px);}
+to {
+    transform: translateY(100px);
+}
+}
+
+@keyframes hide {
+
+to {
+    opacity: 0;
+}
 }

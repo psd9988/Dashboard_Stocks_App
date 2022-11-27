@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import Chart from "react-apexcharts";
 import ReactApexChart from "react-apexcharts";
+import './treeMapChart.css'
 
 
 export default function PopCharts() {
@@ -78,12 +79,13 @@ export default function PopCharts() {
         type: "treemap",
       },
       title: {
-        text: "Treemap with Color scale",
+        text: "Treemap",
       },
       dataLabels: {
         enabled: true,
         style: {
           fontSize: "12px",
+          
         },
         formatter: function (text, op) {
           return [text, op.value];
@@ -114,14 +116,15 @@ export default function PopCharts() {
     });
   }, []);
   return (
-    <div className="app">
-      <div className="row">
-        <div className="mixed-chart">
+    <div className="treeMapChartMainContainer">
+      <div className="treeMapChartMainrow">
+        <div className="treeMapChartMainmixed-chart">
           <ReactApexChart
             options={options}
             series={series}
             type="treemap"
-            height="700px"
+           
+            
           />
         </div>
       </div>

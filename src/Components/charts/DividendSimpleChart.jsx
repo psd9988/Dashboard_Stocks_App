@@ -1,12 +1,13 @@
 import React from "react";
-import CanvasJSReact from "../canvasjs.stock.react";
+import CanvasJSReact from "../../canvasjs.stock.react";
+// var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-const DividendSimpleChart = () => {
+export const DividendSimpleChart = () => {
   const options = {
     title: {
       text: "Monthly Dividend Chart",
-    },
+    },height: '300',
     data: [
       {
         type: "column",
@@ -21,11 +22,11 @@ const DividendSimpleChart = () => {
     ],
   };
   return (
-    <div style={{ height: "200px", width: "500px" }}>
+    <div style={{margin:'1rem'}}>
       <CanvasJSChart options={options} />
     </div>
   );
 };
 
-export default DividendSimpleChart;
+
 
