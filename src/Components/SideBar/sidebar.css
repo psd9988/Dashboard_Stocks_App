@@ -1,8 +1,13 @@
 .sideBarMainContainer {
-  height: 100vh;
+  /* height: 100vh; */
+  width: 80vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  /* background-color: lightcoral; */
+}
+body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
 .btnside {
   background: transparent;
   border: 0;
@@ -27,27 +32,28 @@
   transition: 0.4s;
 }
 
-.burger {
-  z-index: 1;
-  left: 72px;
-  display: grid;
-  place-items: center;
-  width: 72px;
-  height: 64px;
-  /* background: url(/src/Assets/hamburger.jpg) no-repeat center; */
-}
+@media (width < 700px) {
+  .sidebar {
+    /* translate: 50% 0; */
+    width: 20vm;
+  }
 
-body.open .burger {
-  left: auto;
-  right: 0;
-  /* background: url(./assets/icon-close.svg) no-repeat center; */
-}
-
-@media (width >= 500px) {
-  .burger {
+  .sidebar > nav > .btnside > span {
     display: none;
   }
+
+  .sideBarMainContainer {
+    width: 20vw;
+  }
+
+  .btnside {
+    width: 0;
+  }
+  body.open .sidebar {
+    translate: 0 0;
+  }
 }
+
 
 .sidebar > nav {
   display: grid;
